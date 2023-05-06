@@ -9,5 +9,9 @@ package com.portfolio.javiermasetto.Dto;
  * @author Javier
  */
 public class dtoEducacion {
+
+    public String getNombreE() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
