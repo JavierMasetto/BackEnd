@@ -2,7 +2,6 @@
 package com.portfolio.javiermasetto.Security.jwt;
 
 import com.portfolio.javiermasetto.Security.Service.UserDetailsImpl;
-import com.portfolio.mgb.Security.Service.UserDetailsImpl;
 import java.io.IOException;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

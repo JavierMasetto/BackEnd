@@ -1,5 +1,6 @@
 
 package com.portfolio.javiermasetto.Security;
+
 import com.portfolio.javiermasetto.Security.Service.UserDetailsImpl;
 import com.portfolio.javiermasetto.Security.jwt.JwtEntryPoint;
 import com.portfolio.javiermasetto.Security.jwt.JwtTokenFilter;

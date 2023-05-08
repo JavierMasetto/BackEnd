@@ -1,31 +1,17 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.portfolio.javiermasetto.Repository;
 
 import com.portfolio.javiermasetto.Entity.Educacion;
-import java.util.List;
 import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- *
- * @author Javier
- */
-public interface REducacion {
-
-    public List<Educacion> findAll();
-
-    public Optional<Educacion> findById(int id);
-
+@Repository
+public interface REducacion extends JpaRepository<Educacion, Integer>{
     public Optional<Educacion> findByNombreE(String nombreE);
-
-    public void save(Educacion educacion);
-
-    public void deleteById(int id);
-
-    public boolean existsById(int id);
-
     public boolean existsByNombreE(String nombreE);
-    
 }

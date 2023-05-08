@@ -4,8 +4,9 @@ package com.portfolio.javiermasetto.Controller;
 import com.portfolio.javiermasetto.Dto.dtoEducacion;
 import com.portfolio.javiermasetto.Entity.Educacion;
 import com.portfolio.javiermasetto.Security.Controller.Mensaje;
+import com.portfolio.javiermasetto.Service.Seducacion;
+import io.micrometer.common.util.StringUtils;
 import java.util.List;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -87,38 +88,5 @@ public class CEducacion {
         sEducacion.save(educacion);
         
         return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);
-    }
-
-    private static class Seducacion {
-
-        public Seducacion() {
-        }
-
-        private List<Educacion> list() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private boolean existsById(int id) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private Object getOne(int id) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-
-        private void delete(int id) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private boolean existsByNombreE(String nombreE) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private void save(Educacion educacion) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private Object getByNmbreE(String nombreE) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
     }
 }

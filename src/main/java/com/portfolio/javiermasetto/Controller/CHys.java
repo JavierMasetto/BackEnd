@@ -1,10 +1,11 @@
-
 package com.portfolio.javiermasetto.Controller;
 
 import com.portfolio.javiermasetto.Dto.dtoHys;
+import com.portfolio.javiermasetto.Entity.hys;
 import com.portfolio.javiermasetto.Security.Controller.Mensaje;
+import com.portfolio.javiermasetto.Service.Shys;
+import io.micrometer.common.util.StringUtils;
 import java.util.List;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,14 +20,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"https://mgbfrontend.web.app","http://localhost:4200"})
 @RequestMapping("/skill")
 public class CHys {
 
     @Autowired
     Shys shys;
 
-  
     @GetMapping("/lista")
     public ResponseEntity<List<hys>> list() {
         List<hys> list = shys.list();
@@ -90,49 +90,4 @@ public class CHys {
         return new ResponseEntity(new Mensaje("Skill actualizada"), HttpStatus.OK);
 
     }
-
-    private static class hys {
-
-        public hys() {
-        }
-
-        private void setNombre(String nombre) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-    }
-
-    private static class Shys {
-
-        public Shys() {
-        }
-
-        private List<hys> list() {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private boolean existsById(int id) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private Object getOne(int id) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private void delete(int id) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private boolean existsByNombre(String nombre) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private void save(hys hYs) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-
-        private Object getByNombre(String nombre) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        }
-    }
 }
-
